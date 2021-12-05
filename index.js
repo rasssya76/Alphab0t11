@@ -301,7 +301,7 @@ const checkSCommand = (id) => {
 		}
 		
 const reply2 = (teks) => {
-            alpha.sendMessage(from, teks, text, {quoted: ftroli, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+            alpha.sendMessage(from, teks, text, {quoted: mek, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
         }
 // Auto Read Group 
 var chats = await alpha.chats.array.filter(v => v.jid.endsWith('g.us'))
@@ -1298,7 +1298,7 @@ const _0x16a867=_0xc766;(function(_0x194b8d,_0x39c671){const _0x442409=_0xc766,_
         
 
         const mentions = (teks, memberr, id) => {
-            (id == null || id == undefined || id == false) ? alpha.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : alpha.sendMessage(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": memberr } })
+            (id == null || id == undefined || id == false) ? alpha.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": memberr } })
         }
         const fakestatus = (teks) => {
             alpha.sendMessage(from, teks, text, {
@@ -1473,7 +1473,7 @@ remoteJid :"6289523258649-1604595598@g.us" }: {})
                     if(mime.split("/")[0] === "audio"){
                         mime = Mimetype.mp4Audio
                     }
-                    alpha.sendMessage(to, media, type, { quoted: ftroli, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+                    alpha.sendMessage(to, media, type, { quoted: mek, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
                     
                     fs.unlinkSync(filename)
                 });
@@ -1494,10 +1494,10 @@ remoteJid :"6289523258649-1604595598@g.us" }: {})
             if(mime.split("/")[0] === "audio"){
                 mime = Mimetype.mp4Audio
             }
-            return alpha.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: ftroli, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
+            return alpha.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: mek, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
         }
         const textImg = (teks) => {
-            return alpha.sendMessage(from, teks, text, {quoted: ftroli, thumbnail: fs.readFileSync(`image/${thumbnail}`)})
+            return alpha.sendMessage(from, teks, text, {quoted: mek, thumbnail: fs.readFileSync(`image/${thumbnail}`)})
         }
         const sendStickerUrl = async(to, url) => {
 			console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
@@ -1638,7 +1638,7 @@ const checkWin = (sender) => {
             for (let wn of _win) {
                 if (wn.jid === sender) {
                     let winCounts = winawal - wn.win
-                    if (winCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: ftroli })
+                    if (winCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: mek })
                     return `${winCounts}`
                     found = true
                 }
@@ -1655,7 +1655,7 @@ const checkWin = (sender) => {
             for (let ls of _lose) {
                 if (ls.jid === sender) {
                     let loseCounts = loseawal - ls.lose
-                    if (loseCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: ftroli })
+                    if (loseCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: mek })
                     return `${loseCounts}`
                     found = true
                 }
@@ -1783,7 +1783,7 @@ const checkWin = (sender) => {
                 })
                 fs.unlinkSync("./temp/" + from + ".json");
 	} else if (sender == `${tttSkuy.Y}@s.whatsapp.net` &&  budy.toLowerCase() == 'n') {
-		alpha.sendMessage(from, `「 *Game Tictactoe Rejected* 」\n\n• @${tttSkuy.Y} yahaha cupu lo`, text, {quoted: ftroli, contextInfo: { mentionedJid: [tttSkuy.Y + "@s.whatsapp.net"]}})
+		alpha.sendMessage(from, `「 *Game Tictactoe Rejected* 」\n\n• @${tttSkuy.Y} yahaha cupu lo`, text, {quoted: mek, contextInfo: { mentionedJid: [tttSkuy.Y + "@s.whatsapp.net"]}})
 		fs.unlinkSync("./temp/" + from + ".json");
 	}
 }
@@ -1843,7 +1843,7 @@ const checkWin = (sender) => {
 							if (requiredXp <= getLevelingXp(sender)) {
 								addLevelingLevel(sender, 1)
 								addBalance(sender, 30, balance)
-								await alpha.sendMessage(`* 「 LEVEL UP 」 *\n\n🎯 *User :* @${sender.split("@")[0]}\n🆔 *Nomer :* ${sender.split("@")[0]}\n📊 *Xp :* ${getLevelingXp(sender)}\n💹 *Level :* ${getLevel} > ${getLevelingLevel(sender)}\n💳 *Balance :* ${getBalance(sender, balance)}\n👛 *Dompet :* ${checkATMuser(sender)}\n📛 *Role :* ${role}\n\nCongrats 🎉`,text, {quoted: ftroli, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+								await alpha.sendMessage(`* 「 LEVEL UP 」 *\n\n🎯 *User :* @${sender.split("@")[0]}\n🆔 *Nomer :* ${sender.split("@")[0]}\n📊 *Xp :* ${getLevelingXp(sender)}\n💹 *Level :* ${getLevel} > ${getLevelingLevel(sender)}\n💳 *Balance :* ${getBalance(sender, balance)}\n👛 *Dompet :* ${checkATMuser(sender)}\n📛 *Role :* ${role}\n\nCongrats 🎉`,text, {quoted: mek, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 								}
 							} catch (err) {
 								console.error(err)
@@ -2005,12 +2005,12 @@ for (let zeeoneee of imagenye){
 for (let zeeonew of videonye){
 	if (budy === zeeonew){
 		result = fs.readFileSync(`./media/video/${zeeonew}.mp4`)
-		alpha.sendMessage(from, result,video, {mimetype: 'video/mp4', duration: 359996400, quoted: ftroli})
+		alpha.sendMessage(from, result,video, {mimetype: 'video/mp4', duration: 359996400, quoted: mek})
 		}
 }  
 for (let i = 0; i < filter.length ; i++) {
       if (budy == filter[i].Filter) {
-      alpha.sendMessage(from, filter[i].Jawaban, text, {quoted: ftroli})
+      alpha.sendMessage(from, filter[i].Jawaban, text, {quoted: mek})
       }
       }  
 // TEBAK GAMBAR
@@ -2394,7 +2394,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					fs.unlinkSync(rano)
 					})
 					} else {
@@ -2411,7 +2411,7 @@ break
 	                let teks = `${aanu.display_url}`
                     titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=trash&url=${teks}`, {method: 'get'})
                     buffer = await getBuffer(titid.message)
-					alpha.sendMessage(from, buffer, image, {caption : lang.success(),quoted: ftroli})
+					alpha.sendMessage(from, buffer, image, {caption : lang.success(),quoted: mek})
                    }
               break       
 				
@@ -2431,7 +2431,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2455,7 +2455,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2479,7 +2479,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2503,7 +2503,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2527,7 +2527,7 @@ break
 					exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2551,7 +2551,7 @@ break
 					exec(`wget ${anu6} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					
@@ -2576,7 +2576,7 @@ break
 					exec(`wget ${anu7} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2601,7 +2601,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2626,7 +2626,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2651,7 +2651,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2676,7 +2676,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2701,7 +2701,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2726,7 +2726,7 @@ break
 					exec(`wget ${anu8} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					console.log(color(time, 'magenta'), color('Succes send sticker...'))
 					fs.unlinkSync(rano)
 					})
@@ -2749,7 +2749,7 @@ break
 					exec(`wget ${anu2} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					fs.unlinkSync(rano)
 					})
 					
@@ -2772,7 +2772,7 @@ break
 					exec(`wget ${anu3} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					fs.unlinkSync(rano)
 					})
 					
@@ -2794,7 +2794,7 @@ break
 					exec(`wget ${anu4} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 					fs.unlinkSync(ranp)
 					if (err) return reply(mess.error.stick)
-					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: ftroli})
+					alpha.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
 					fs.unlinkSync(rano)
 					})
 					
@@ -2845,7 +2845,7 @@ alpha.sendMessage(from,  buttonMessagee, MessageType.buttonsMessage,{
             sendEphemeral: true,
             "mentionedJid" : [sender]
             },
-			quoted: ftroli,sendEphemeral: true 
+			quoted: mek,sendEphemeral: true 
 			})
         }
         break
@@ -3143,7 +3143,7 @@ break
 		            })
 		            var options = {
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -3166,7 +3166,7 @@ break
 		            })
 		            var options = {
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -3183,7 +3183,7 @@ break
 		            })
 		            var options = {
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, image, options)
@@ -3202,7 +3202,7 @@ break
 		            	mimetype : 'audio/mp4',
 		            	ptt : true,
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, audio, options)
@@ -3220,7 +3220,7 @@ break
 		            var options = {
 		            	mimetype : 'video/mp4',
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, video, options)
@@ -3265,7 +3265,7 @@ break
 		            fs.unlinkSync(media2)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            alpha.sendMessage(from, buffer453, audio, { mimetype: 'audio/mp4', quoted: ftroli })
+		            alpha.sendMessage(from, buffer453, audio, { mimetype: 'audio/mp4', quoted: mek })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -3279,7 +3279,7 @@ break
 		            fs.unlinkSync(media3)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: ftroli })
+		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -3293,7 +3293,7 @@ break
 		            fs.unlinkSync(media4)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: ftroli })
+		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -3305,7 +3305,7 @@ exec(`ffmpeg -i ${media6} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, s
 fs.unlinkSync(media6)
 if (err) return reply('Error!')
 let hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: ftroli})
+alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
 fs.unlinkSync(ran)
 })
 break
@@ -3318,7 +3318,7 @@ break
 		            fs.unlinkSync(media5)
 		            if (err) return fakegroup(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
-		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: ftroli })
+		            alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 		            fs.unlinkSync(ran)
 		            })
 		            break
@@ -3386,14 +3386,14 @@ case 'setexif':
 		            ffmpeg(media___)
 		            .on('error', (e) => {
 		            console.log(e)
-		            alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: ftroli })
+		            alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
 		            fs.unlinkSync(media___)
 		            })
 		            .on('end', () => {
 		            _out = getRandom('.webp')
 		            spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
 		            .on('exit', () => {
-		            alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: ftroli })
+		            alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
 		            fs.unlinkSync(out)
 		            fs.unlinkSync(_out)
 		            fs.unlinkSync(media___)
@@ -3413,14 +3413,14 @@ case 'setexif':
 		            ffmpeg(media___)
 		            .on('error', (e) => {
 		            console.log(e)
-		            alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: ftroli })
+		            alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
 		            fs.unlinkSync(media___)
 		            })
 		            .on('end', () => {
 		            _out = getRandom('.webp')
 		            spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
 		            .on('exit', () => {
-		            alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: ftroli })
+		            alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
 		            fs.unlinkSync(out)
 		            fs.unlinkSync(_out)
 		            fs.unlinkSync(media___)
@@ -3446,7 +3446,7 @@ case 'setexif':
 		            cihcih = await alpha.downloadMediaMessage(swsw)
 		            alpha.sendMessage('status@broadcast', cihcih, image, { caption: `${q}` })
 		            bur = `Sukses Upload Story Image dengan Caption: ${q}`
-		            alpha.sendMessage(from, bur, text, { quoted: ftroli })
+		            alpha.sendMessage(from, bur, text, { quoted: mek })
 		            } else {
 		            fakegroup('```Reply gambarnya!```')
 		            }
@@ -3458,7 +3458,7 @@ case 'setexif':
 		            cihcih = await alpha.downloadMediaMessage(swsw)
 		            alpha.sendMessage('status@broadcast', cihcih, video, { caption: `${q}` }) 
 		            bur = `Sukses Upload Story Video dengan Caption: ${q}`
-		            alpha.sendMessage(from, bur, text, { quoted: ftroli })
+		            alpha.sendMessage(from, bur, text, { quoted: mek })
 		            } else {
 		            fakegroup('```Reply videonya!```')
 		            }
@@ -3537,7 +3537,7 @@ break
 					var optionshidetag = {
 					text: value,
 					contextInfo: { mentionedJid: mem },
-					quoted: ftroli
+					quoted: mek
 					}
 					alpha.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": `${setting.fake}`, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync(`image/${thumbnail}`)} }  } })
 					break
@@ -3706,7 +3706,7 @@ break
                             exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
                                 fs.unlinkSync(ranp)
                                 if (err) return reply('emror bang')
-                                alpha.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: ftroli })
+                                alpha.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: mek })
                                     fs.unlinkSync(ranw)
                                 })
                             })
@@ -3899,7 +3899,7 @@ break
             if(!q) return reply('Masukkan query')
             pinya = q
             anu = await getBuffer(`https://ferdiz-afk.my.id//api/pinterest?q=${pinya}`)
-            alpha.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0), caption: `${lang.success()}\n\nPlease Subscribe https://youtu.be/P6u0xroWJmI`, quoted: ftroli})
+            alpha.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0), caption: `${lang.success()}\n\nPlease Subscribe https://youtu.be/P6u0xroWJmI`, quoted: mek})
             break
     case 'playstore':
             if(!q) return reply('lu nyari apa?')
@@ -3921,7 +3921,7 @@ var nih_buff = await getBuffer(tod.picurl);
 const tt = `*INSTAGRAM STALK*
 
 \nUsername: ${tod.username}\nFullname: ${tod.fullname}\npostingan: ${tod.post}\ncategory_akun: ${tod.category_name}\nverified: ${tod.verified_user}\nprivate: ${tod.private_user}\nFollowing: ${tod.following}\nFollower: ${tod.followers}\nBio:\n${tod.bio}`;
-alpha.sendMessage(from, nih_buff, image, { quoted: ftroli, caption: tt });
+alpha.sendMessage(from, nih_buff, image, { quoted: mek, caption: tt });
 break    
 		    case 'fb':
             if (!q) return reply('Linknya?')
@@ -4063,7 +4063,7 @@ break
 		            })
 		            var options = {
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -4080,7 +4080,7 @@ break
 		            })
 		            var options = {
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, image, options)
@@ -4099,7 +4099,7 @@ break
 		                mimetype : 'audio/mp4',
 		                ptt : true,
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, audio, options)
@@ -4117,7 +4117,7 @@ break
 		            var options = {
 		                mimetype : 'video/mp4',
 		                contextInfo: { mentionedJid: mem },
-		                quoted: ftroli
+		                quoted: mek
 		            }
 		            ini_buffer = fs.readFileSync(file)
 		            alpha.sendMessage(from, ini_buffer, video, options)
@@ -4207,7 +4207,7 @@ o = response.participants[0]
 let inv = (Object.values(o))
 if(inv[0].code == 409) return reply('Orang yang anda add sudah ada didalam Group!')
 else if(inv[0].code == 403){
-alpha.sendMessage(from, `User private\n\nMengirim Undangan Group Ke @${q.split('@')[0]}`, MessageType.text, {quoted: ftroli, contextInfo: {mentionedJid: [orang]}})
+alpha.sendMessage(from, `User private\n\nMengirim Undangan Group Ke @${q.split('@')[0]}`, MessageType.text, {quoted: mek, contextInfo: {mentionedJid: [orang]}})
 alpha.sendMessage(from, orang, inv[0].invite_code, inv[0].invite_code_exp, groupMetadata.subject , `Salah Satu Admin Mengundang Anda Masuk Ke Sini Silahkan Klik Bergabung Untuk Masuk`)
 }
 					break 
@@ -4436,7 +4436,7 @@ break*/
 			case 'cek':
 			case 'me':
 			if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-					return alpha.sendMessage(from, JSON.stringify(eval(args.join(' '))), text, { quoted: ftroli})
+					return alpha.sendMessage(from, JSON.stringify(eval(args.join(' '))), text, { quoted: mek})
 					break
 			case 'bc':
 			case 'broadcast':
@@ -4490,7 +4490,7 @@ break*/
 						no += 1
 						teks += `[${no.toString()}]`
 					}
-					alpha.sendMessage(from, buf, image, {quoted: ftroli, caption: teks})
+					alpha.sendMessage(from, buf, image, {quoted: mek, caption: teks})
 					break
 			case 'ghstalk': 
             case 'githubstalk': 
@@ -4850,7 +4850,7 @@ break*/
 									])
 									.on('error', () => reply(lang.tryAgain()))
 									.on('exit', () => {
-										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: ftroli, caption: `Jangan Malas`})
+										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Jangan Malas`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -4879,7 +4879,7 @@ break*/
 									])
 									.on('error', () => reply(lang.tryAgain()))
 									.on('exit', () => {
-										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: ftroli, caption: `Jangan Malas`})
+										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Jangan Malas`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -4908,7 +4908,7 @@ break*/
 									])
 									.on('error', () => reply(lang.tryAgain()))
 									.on('exit', () => {
-										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: ftroli, caption: `Jangan Malas`})
+										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Jangan Malas`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -4937,7 +4937,7 @@ break*/
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: ftroli, caption: `Jangan Malas`})
+										alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Jangan Malas`})
 										limitAdd(sender, limit)
 									})
 									}
@@ -4946,13 +4946,13 @@ break*/
                     if (args.length < 1) return reply(lang.noteks(prefix, command))
                     ttp = args.join(' ')
                     anu1 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${ttp}`)
-                    alpha.sendMessage(from, anu1, image, {quoted: ftroli, caption : '.sticker'})
+                    alpha.sendMessage(from, anu1, image, {quoted: mek, caption : '.sticker'})
                     break
          case 'attp':  
                     if (args.length < 1) return reply(lang.noteks(prefix, command))
                     hhhh = q
                     anu1 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${hhhh}`)
-                    alpha.sendMessage(from, anu1, sticker, {quoted: ftroli})
+                    alpha.sendMessage(from, anu1, sticker, {quoted: mek})
                     break
              case 'ktpmaker': case 'ktp':
                     if (args.length == 0) return reply(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nExample: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/Xb2pZ88/test.jpg`)
@@ -4977,7 +4977,7 @@ break*/
                     bikin = (`https://ferdiz-afk.my.id//api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=-&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${until}&prov=${prov}&kab=${kabu}&picurl=${img}`)
                       console.log(bikin)
                     imge = await getBuffer(bikin)
-                    await alpha.sendMessage(from, imge, image, { thumbnail: Buffer.alloc(0), quoted: ftroli });
+                    await alpha.sendMessage(from, imge, image, { thumbnail: Buffer.alloc(0), quoted: mek });
                     break;
         case 'nulis2':
 if (args.length < 1) return reply(`*Usage*: ${prefix + command} nama&kelas&nomor&kata\n*Example*: ${prefix + command} udin&20&17&blablabla`)
@@ -4988,7 +4988,7 @@ var no = bodi.split("&")[2];
 var aksarane = bodi.split("&")[3];
 reply('membuat bos...')
                  rakz = await getBuffer(`https://ferdiz-afk.my.id//api/tulis?nama=${nama}&no=${no}&kelas=${kelas}&text=${aksarane}`)
-                 alpha.sendMessage(from, rakz, image, { quoted: ftroli ,thumbnail: Buffer.alloc(0) });
+                 alpha.sendMessage(from, rakz, image, { quoted: mek ,thumbnail: Buffer.alloc(0) });
 
                  break;
               /*
@@ -5014,7 +5014,7 @@ reply('membuat bos...')
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${setiker.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama sticker_`
-					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": setiker } })
+					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
 					break
 					
 			case 'addimg':
@@ -5035,7 +5035,7 @@ reply('membuat bos...')
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${imagenye.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama foto/image_`
-					fakegroup(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": setiker } })
+					fakegroup(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
 					break
 			case 'addvid':
 			if(!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
@@ -5055,7 +5055,7 @@ reply('membuat bos...')
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${videonye.length}* \n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama video_`
-					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": imagenye } })
+					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagenye } })
 					break
 			
 			case 'addvn':
@@ -5077,7 +5077,7 @@ reply('membuat bos...')
 						teks += `- ${awokwkwk}\n`
 					}
 					teks += `\n*Total : ${audionye.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama audio_`
-					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": audionye } })
+					alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": audionye } })
 					break
 			case 'addrespon':
 			if(!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
@@ -5118,7 +5118,7 @@ case 'listrespon':
    teks += `• Filter : ${i.Filter}\n• Jawab : ${i.Jawaban}\n---------------------------\n`
    }
    teks += `Total : ${filter.length}`
-   alpha.sendMessage(from, teks.trim(), extendedText, {quoted: ftroli})
+   alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek})
    break
 		case 'caripesan2':
             if(!q)return reply('Masukkan pesan yg mau di cari')
@@ -5285,7 +5285,7 @@ tttSkuy.Z = sender.replace("@s.whatsapp.net", "")
 tttSkuy.Y = args[0].replace("@", "");
 fs.writeFileSync(`./temp/${from}.json`, JSON.stringify(tttSkuy, null, 2))
 starGame = `「 *MEMULAI GAME TICTACTOE* 」${enter}${enter}•@${sender.replace("@s.whatsapp.net", "")} Menantang Bermain Tictactoe ${enter}[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan${enter}${enter}`
-alpha.sendMessage(from, starGame, text, {quoted: ftroli, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 break
              case 'size':
 if (args.length < 1) return reply('Masukan angkanya')
@@ -5371,7 +5371,7 @@ case 'linkgroup':
 				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				    linkgc = await alpha.groupInviteCode (from)
 				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
-				    alpha.sendMessage(from, yeh, text, {quoted: ftroli})
+				    alpha.sendMessage(from, yeh, text, {quoted: mek})
 			        break
 		case 'unpin':
                 if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
@@ -5434,7 +5434,7 @@ case 'linkgroup':
 					teks = q
 					anu = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${teks}`)
 					buff = await getBuffer(anu.screenshot)
-					alpha.sendMessage(from, buff, image, {quoted: ftroli, caption : teks})
+					alpha.sendMessage(from, buff, image, {quoted: mek, caption : teks})
 					break
 			case 'artinama':
                 if (args.length < 1) return reply('Apa yang mau dicari um?')
@@ -5855,7 +5855,7 @@ exec(`ffmpeg -i ${media3} -filter:a "volume=${args[0]}" ${rname}`, (err, stderr,
 fs.unlinkSync(media3)
 if (err) return reply('Error!')
 jadie = fs.readFileSync(rname)
-alpha.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt: true, quoted: ftroli})
+alpha.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt: true, quoted: mek})
 fs.unlinkSync(rname)
 }
 )
@@ -5868,7 +5868,7 @@ if (!isQuotedAudio) return reply('Reply audio!')
 fs.unlinkSync(media4)
 if (err) return reply('emror')
 hihi = fs.readFileSync(ran)
-alpha.sendMessage(from, hihi, audio, {mimetype: 'audio/mp4', ptt: true, quoted: ftroli})
+alpha.sendMessage(from, hihi, audio, {mimetype: 'audio/mp4', ptt: true, quoted: mek})
 fs.unlinkSync(ran)
 	})
 break
@@ -5879,7 +5879,7 @@ break
             teks += `│+  @${hui.split('@')[0]}\n`
           }
           teks += `│+ Total : ${banned.length}\n╰──────「 *ALPHA BOT* 」────`
-          alpha.sendMessage(from, teks.trim(), extendedText, { quoted: ftroli, contextInfo: { "mentionedJid": [hui] } })
+          alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": [hui] } })
           break
  		case 'ban': case 'banned': case 'block':
           if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
@@ -5918,7 +5918,7 @@ nomor : nmor
 }
 save.push(H1)
 fs.writeFileSync('./lib/sv.js', JSON.stringify(save))
-alpha.sendMessage(from, `Oke Sudag Tersimpan`, MessageType.text, { quoted: ftroli})		     	 
+alpha.sendMessage(from, `Oke Sudag Tersimpan`, MessageType.text, { quoted: mek})		     	 
 break
 case 'mutual':
 data = fs.readFileSync('./lib/sv.js');
@@ -5982,7 +5982,7 @@ for (let sensi of absen) {
 teks += `${enter}々 @${sensi.split('@')[0]} ✓${enter}`
 }
 teks += `TOTAL MEMBER YG ABSEN : ${absen.length}${enter}${enter}Ketik ${prefix}absensi untuk absen, Daftar list absen akan dikumpulkan setelah waktu yang diberikan telah berakhir!`
-alpha.sendMessage(from, teks.trim(), extendedText, {quoted: ftroli, contextInfo: {"mentionedJid": absen}})
+alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": absen}})
 break
 
 case 'absen':
@@ -6000,7 +6000,7 @@ teks += `ABSENSI : ${sensi.length}${enter}${enter}Ketik ${prefix}absensi untuk a
 reply(`List Presentasi Hadir Telah Siap${enter}${enter}Ketik ${prefix}absensi untuk absen, Daftar list absen akan dikumpulkan setelah waktu yang diberikan telah berakhir!`)
 setTimeout( () => {
 reply(`Waktu Absensi Telah Habis`)
-alpha.sendMessage(from, teks.trim(), extendedText, {quoted: ftroli, contextInfo: {"mentionedJid": absen}})
+alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": absen}})
 }, tem)
 setTimeout( () => {
 ini = absen.indexOf(from)
@@ -6019,7 +6019,7 @@ break
                     fs.writeFileSync("./src/tebakgambar.json", JSON.stringify(tebakgambar))
                     console.log(jawaban)
                     tebakya = await getBuffer(tebak)
-                    alpha.sendMessage(from, tebakya, image, { quoted: ftroli, caption: "Jawaban salah auto harus donasi" })
+                    alpha.sendMessage(from, tebakya, image, { quoted: mek, caption: "Jawaban salah auto harus donasi" })
                    await sleep(30000)
                     if (tebakgambar.hasOwnProperty(sender.split('@')[0])) {
                         reply("Jawaban: " + jawaban)
@@ -6036,7 +6036,7 @@ break
                     caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
                     fs.writeFileSync("./src/caklontong.json", JSON.stringify(caklontong))
                     console.log(jawaban)
-                    alpha.sendMessage(from, tebak, text, { quoted: ftroli })
+                    alpha.sendMessage(from, tebak, text, { quoted: mek })
                    await sleep(30000)
                     if (caklontong.hasOwnProperty(sender.split('@')[0])) {
                         reply("Jawaban: " + jawaban)
@@ -6053,7 +6053,7 @@ break
                     family[sender.split('@')[0]] = jawaban.toLowerCase()
                     fs.writeFileSync("./src/family100.json", JSON.stringify(family))
                     console.log(jawaban)
-                    alpha.sendMessage(from, tebak, text, { quoted: ftroli })
+                    alpha.sendMessage(from, tebak, text, { quoted: mek })
                    await sleep(30000)
                     if (family.hasOwnProperty(sender.split('@')[0])) {
                         reply("Jawaban: " + jawaban)
@@ -6070,7 +6070,7 @@ break
                     fs.writeFileSync("./src/tebakanime.json", JSON.stringify(tebakanime))
                     console.log(jawaban)
                     tebakya = await getBuffer(tebak)
-                    alpha.sendMessage(from, tebakya, image, { quoted: ftroli, caption: "Jawaban salah auto harus donasi" })
+                    alpha.sendMessage(from, tebakya, image, { quoted: mek, caption: "Jawaban salah auto harus donasi" })
                    await sleep(30000)
                     if (tebakanime.hasOwnProperty(sender.split('@')[0])) {
                         reply("Jawaban: " + jawaban)
@@ -6228,7 +6228,7 @@ if(subscribezeeoneofc == 'qr_ovo13'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal ${_minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana13'){
 	gambar_dana = `${qr_code_dana}`
@@ -6242,7 +6242,7 @@ if(subscribezeeoneofc == 'qr_dana13'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal ${_minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_gopay13'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6256,7 +6256,7 @@ if(subscribezeeoneofc == 'qr_gopay13'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal ${_minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 
 if(subscribezeeoneofc == 'qr_ovo14'){
@@ -6271,7 +6271,7 @@ if(subscribezeeoneofc == 'qr_ovo14'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal ${__minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana14'){
 	gambar_dana = `${qr_code_dana}`
@@ -6285,7 +6285,7 @@ if(subscribezeeoneofc == 'qr_dana14'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal ${__minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_gopay14'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6299,7 +6299,7 @@ if(subscribezeeoneofc == 'qr_gopay14'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal ${__minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }
 
 if(subscribezeeoneofc == 'qr_ovo15'){
@@ -6314,7 +6314,7 @@ if(subscribezeeoneofc == 'qr_ovo15'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal ${___minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana15'){
 	gambar_dana = `${qr_code_dana}`
@@ -6328,7 +6328,7 @@ if(subscribezeeoneofc == 'qr_dana15'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal ${___minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 }    
 if(subscribezeeoneofc == 'qr_gopay15'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6342,7 +6342,7 @@ if(subscribezeeoneofc == 'qr_gopay15'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal ${___minggu}
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 }
 
 
@@ -6358,7 +6358,7 @@ if(subscribezeeoneofc == 'qr_ovo16'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal ${_bulan}
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana16'){
 	gambar_dana = `${qr_code_dana}`
@@ -6372,7 +6372,7 @@ if(subscribezeeoneofc == 'qr_dana16'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal ${_bulan}
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 }    
 if(subscribezeeoneofc == 'qr_gopay16'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6386,7 +6386,7 @@ if(subscribezeeoneofc == 'qr_gopay16'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal ${_bulan}
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 }
 
 if(subscribezeeoneofc == 'qr_ovo17'){
@@ -6401,7 +6401,7 @@ if(subscribezeeoneofc == 'qr_ovo17'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal ${_permanen}
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana17'){
 	gambar_dana = `${qr_code_dana}`
@@ -6415,7 +6415,7 @@ if(subscribezeeoneofc == 'qr_dana17'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal ${_permanen}
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_gopay17'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6429,7 +6429,7 @@ if(subscribezeeoneofc == 'qr_gopay17'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal ${_permanen}
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }
 if(subscribezeeoneofc == 'qr_ovo18'){
 	gambar_ovo = `${qr_code_ovo}`
@@ -6440,7 +6440,7 @@ if(subscribezeeoneofc == 'qr_ovo18'){
 3. Scan Barcode diatas OVO.
 4. dan Masukkan Nominal Jumlah Donasi.
 5. Selesai`
-await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_ovo_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_dana18'){
 	gambar_dana = `${qr_code_dana}`
@@ -6451,7 +6451,7 @@ if(subscribezeeoneofc == 'qr_dana18'){
 3. Scan Barcode diatas DANA.
 4. dan Masukkan Nominal Jumlah Donasi.
 5. Selesai`
-await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_dana_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }    
 if(subscribezeeoneofc == 'qr_gopay18'){
 	gambar_gopay = `${qr_code_gopay}`
@@ -6462,7 +6462,7 @@ if(subscribezeeoneofc == 'qr_gopay18'){
 3. Scan Barcode diatas GOPAY.
 4. dan Masukkan Nominal Jumlah Donasi.
 5. Selesai`
-await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: ftroli, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+await alpha.sendMessage(from, gambar_gopay_nya, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: ini_bayar,contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 }   
 if (budy.includes("eror",'error','Eror','Error')){
 					alpha.updatePresence(from, Presence.composing)
@@ -6496,7 +6496,7 @@ let papako = [{
 if (budy.startsWith('x')){
 try {
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: ftroli})
+return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
 } catch(err) {
 e = String(err)
 reply(e)
@@ -6505,7 +6505,7 @@ reply(e)
 if (budy.startsWith('>')){
 try {
 	if (!mek.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: ftroli})
+return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
 } catch(err) {
 e = String(err)
 reply(e)
